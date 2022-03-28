@@ -1,4 +1,4 @@
-// An implementation of a Training Record as an ArrayList
+     // An implementation of a Training Record as an ArrayList
 package com.stir.cscu9t4practical1;
 
 
@@ -24,13 +24,24 @@ public class TrainingRecord {
        ListIterator<Entry> iter = tr.listIterator();
        String result = "No entries found";
        while (iter.hasNext()) {
-          Entry current = iter.next();
-          if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
-             result = current.getEntry();
+           Entry current = iter.next();
+           if (current.getDay() == d && current.getMonth() == m && current.getYear() == y)
+               result = current.getEntry();
+           }
+           return result;
+       }
+    // lookupEntry
+
+    /*public String findAllEntry(int d, int m, int y) { // added this
+        ListIterator<Entry> iter = tr.listIterator();
+        String result = "No entries found";
+        while (iter.hasNext()) {
+            Entry current = inter.next();
+            if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) {
+                result =
             }
-       return result;
-   } // lookupEntry
-   
+        }
+    }*/
    // Count the number of entries
    public int getNumberOfEntries(){
        return tr.size();
